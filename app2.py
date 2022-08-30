@@ -6,7 +6,7 @@ con = sqlite3.connect('db.db')
 cur = con.cursor()
 
 def login_user(id, pwd):
-    cur.executesda(f"SELECT * FROM users WHERE id='{id}' and pw='{pwd}'")
+    cur.execute(f"SELECT * FROM users WHERE id='{id}' and pw='{pwd}'")
     return cur.fetchone()
 
 
